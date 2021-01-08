@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  	<include file="$(find racecar_simulator)/launch/simulator.launch">
+		  <arg name="map" value="$(find pure_pursuit_tracker)/maps/map_trackporto.yaml"/>
+                  <arg name="rviz_file" value="$(find pure_pursuit_tracker)/rviz/pure_pursuit_sim.rviz"/>
+
+  	</include>
+  	
+</launch>

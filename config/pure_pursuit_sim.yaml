@@ -1,0 +1,24 @@
+loop_enable: True
+speed_control: True
+pure_pursuit_rate: 20
+initial_lookahead_distance : 0.5
+initial_velocity : 3.0
+straight_lookahead_dist : 1.0
+turning_lookahead_dist : 1.0
+interpolation_mode : 'linear'
+kp_quad : 0.75
+quad_factor : 2.5
+straight_vel : 2.75
+turning_vel : 2
+turn_window_min : 2.0
+turn_window_max : 2.5
+max_x_deviation : 3.65
+
+#Frame names
+car_frame: base_link
+
+#Topic names
+odom_topic_name: /odom
+cmd_vel_topic_name: /nav
+localized_pose_topic_name: /pf/viz/inferred_pose
+

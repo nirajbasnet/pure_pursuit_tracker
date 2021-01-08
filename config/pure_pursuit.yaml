@@ -1,0 +1,23 @@
+loop_enable: True
+speed_control: True
+pure_pursuit_rate: 20
+initial_lookahead_distance : 0.5
+initial_velocity : 1.0
+straight_lookahead_dist : 0.7
+turning_lookahead_dist : 0.3
+interpolation_mode : 'linear'
+kp_quad : 0.75
+quad_factor : 2.5
+straight_vel : 1.25
+turning_vel : 0.3
+turn_window_min : 2.0
+turn_window_max : 2.5
+max_x_deviation : 3.65
+
+#Frame names
+car_frame: base_link
+
+#Topic names
+odom_topic_name: /vesc/odom
+cmd_vel_topic_name: /vesc/high_level/ackermann_cmd_mux/input/nav_0
+localized_pose_topic_name: /pf/viz/inferred_pose

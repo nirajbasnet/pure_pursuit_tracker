@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="pure_pursuit_config" default="$(find pure_pursuit_tracker)/config/pure_pursuit.yaml" />
+    <arg name="waypoints_file" default = "$(find pure_pursuit_tracker)/waypoints/porto_waypoints.csv"/>
+    <rosparam file="$(arg pure_pursuit_config)" command="load"/>
+    <node pkg="pure_pursuit_tracker" name="pure_pursuit_visualizer" type="visualize.py" output="screen">
+          <param name="waypoints_filepath" value="$(arg waypoints_file)"/>
+    </node>
+    <node pkg="pure_pursuit_tracker" name="pure_pursuit_node" type="pure_pursuit_sim.py"  output="screen">
+	  <param name="waypoints_filepath" value="$(arg waypoints_file)"/>
+    </node>	
+    <node pkg="pure_pursuit_tracker" name="dead_mans_switch" type="dead_mans_switch.py" output="screen"/>
+	 
+
+</launch>
